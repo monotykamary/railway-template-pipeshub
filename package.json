@@ -1,0 +1,13 @@
+{
+  "name": "railway-template-pipeshub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pinned PipesHub stack for Railway",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "node tests/static.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
