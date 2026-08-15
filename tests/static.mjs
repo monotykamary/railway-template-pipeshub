@@ -38,6 +38,8 @@ for (const heading of [
   assert.ok(templateReadme.includes(heading), `TEMPLATE_README.md is missing ${heading}`);
 }
 
+assert.match(read('mongodb/Dockerfile'), /CMD \[\"mongod\", \"--bind_ip_all\", \"--wiredTigerCacheSizeGB\", \"1\"\]/);
+
 const appConfig = read('app/railway.toml');
 assert.match(appConfig, /healthcheckPath="\/api\/v1\/health\/services"/);
 assert.match(appConfig, /healthcheckTimeout=600/);
