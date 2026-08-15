@@ -30,6 +30,8 @@ On first deployment, enter `PIPESHUB_ADMIN_EMAIL`. The template generates the ad
 
 The upstream all-in-one image serves the web application on port `3000`. Railway service references wire private hostnames and shared secrets; changing those references can break the stack. `HOME`, `HF_HOME`, and the application volume are rooted at `/data/pipeshub`, preserving both local uploads and the approximately 2.5 GB model cache. Daily backups are enabled for irreplaceable volumes.
 
+Neo4j Community logs one-time `ConstraintCreationFailed` messages when PipesHub probes Enterprise-only property-existence constraints. PipesHub `v0.6.0` catches these as optional and continues with supported unique constraints and indexes.
+
 Railway cannot provide the Docker socket required by PipesHub's production sandbox. The template intentionally leaves `SANDBOX_MODE=docker` without a daemon, so safe code-execution and artifact-generation tools are unavailable. Never use `SANDBOX_MODE=local` for an internet-facing deployment because it runs generated code inside the main service.
 
 PipesHub recommends at least 4 CPU cores, 15 GB RAM, and 20 GB disk. This is not a free-tier stack. LAN-only connectors require a secure public or tunneled route, and SMTP-dependent features require post-deploy SMTP configuration.

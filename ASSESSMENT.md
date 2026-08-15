@@ -52,4 +52,17 @@ A five-service ARM64 Compose deployment passed on Docker Engine `29.6.1` with 6 
 - exact soak-window logs for all five services had no matching fatal, panic, traceback, OOM, permission, DNS, connection-refused, exception, or error events
 - test containers, volumes, and network were removed; test-owned images were recorded for release cleanup
 
-Publication remains gated on the same checks in a disposable live Railway project, including private IPv6 DNS, live image builds, public rendering, exact-deployment logs, and redeploy persistence.
+## Live Railway evidence
+
+A fresh deployment from the serialized template passed the release gate on 2026-08-15/16 UTC:
+
+- all five services built from the public wrapper repository and reached `SUCCESS`
+- the generated HTTPS route rendered the PipesHub sign-in page and loaded a static asset
+- query, connector, indexing, Docling, and embedding reported healthy
+- the generated administrator completed password authentication and retrieved the bootstrapped organization
+- MongoDB, Redis, Qdrant, Neo4j, and PipesHub all survived source redeploys; the exact organization ID and creation timestamp persisted
+- seven health, page, and authenticated organization probes passed over a 125-second final soak
+- final soak telemetry had zero HTTP errors, failed DNS lookups, or dropped network flows
+- exact final deployment logs had no crash, OOM, panic, fatal, Qdrant version-mismatch, or deprecated Neo4j memory-setting signals
+- Neo4j Community emitted expected startup errors for Enterprise-only property-existence constraints; PipesHub explicitly catches those unsupported constraints and continued healthy
+- the canonical marketplace route rendered the exact `PipesHub` title, creator, source repository, five-service topology, `v0.6.0`, and Qdrant `1.14.1` markers

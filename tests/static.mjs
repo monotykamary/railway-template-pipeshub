@@ -24,7 +24,8 @@ const readme = read('README.md');
 const templateReadme = read('TEMPLATE_README.md');
 assert.match(readme, /Safe code execution is unavailable/);
 assert.match(readme, /PIPESHUB_ADMIN_EMAIL/);
-assert.ok(!readme.includes('https://railway.com/deploy/'), 'Do not add a deploy URL before its rendered route is verified');
+assert.match(readme, /\[!\[Deploy on Railway\]\(https:\/\/railway\.com\/button\.svg\)\]\(https:\/\/railway\.com\/deploy\/pipeshub\)/);
+assert.deepEqual([...readme.matchAll(/https:\/\/railway\.com\/deploy\/[^)\s]+/g)].map((match) => match[0]), ['https://railway.com/deploy/pipeshub']);
 
 for (const heading of [
   '# Deploy and Host PipesHub on Railway',

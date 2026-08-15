@@ -2,7 +2,7 @@
 
 Deploy a pinned, persistent [PipesHub](https://github.com/pipeshub-ai/pipeshub-ai) AI context layer on Railway.
 
-The Deploy on Railway button will be added only after the live stack and rendered template route have passed release validation.
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/pipeshub)
 
 ## What this repository provides
 
@@ -37,6 +37,7 @@ The bootstrap marker and organization database are checked together on every res
 ## Important limitations
 
 - **Safe code execution is unavailable.** Railway does not expose a Docker socket or privileged nested Docker. `SANDBOX_MODE=docker` is retained so code-execution requests fail rather than run untrusted code in the application container. Do not switch an internet-facing deployment to `local` mode.
+- Neo4j Community logs one-time `ConstraintCreationFailed` messages when PipesHub probes Enterprise-only property-existence constraints. PipesHub `v0.6.0` catches these as optional and continues with supported unique constraints and indexes.
 - PipesHub recommends at least **4 CPU cores, 15 GB RAM, and 20 GB free disk**. Use a Railway plan and service limits that can sustain this multi-database stack.
 - The template is a single application replica. Railway volumes cannot be shared across replicas.
 - Connectors that target private LAN-only systems need a separately secured public or tunneled route.
