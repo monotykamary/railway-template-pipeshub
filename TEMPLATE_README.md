@@ -20,7 +20,7 @@ On first deployment, enter `PIPESHUB_ADMIN_EMAIL`. The template generates the ad
 
 - MongoDB `8.0.17` for application and identity data
 - Redis `8.4.0` for key-value data and Redis Streams
-- Qdrant `1.15.5` for vectors
+- Qdrant `1.14.1` for vectors, kept within the bundled client’s supported version window
 - Neo4j Community `5.26.0` with APOC for the knowledge graph
 - One persistent volume per stateful service
 - Outbound HTTPS on first boot for the embedding-model download

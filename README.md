@@ -20,7 +20,7 @@ The Deploy on Railway button will be added only after the live stack and rendere
 | PipesHub | `0.6.0-slim` | Public HTTPS on port `3000` | `/data/pipeshub` |
 | MongoDB | `8.0.17` | Private `27017` | `/data/db` |
 | Redis | `8.4.0` | Private `6379` | `/data` |
-| Qdrant | `1.15.5` | Private `6333`/`6334` | `/qdrant/storage` |
+| Qdrant | `1.14.1` | Private `6333`/`6334` | `/qdrant/storage` |
 | Neo4j Community | `5.26.0` | Private `7687` | `/data` |
 
 PipesHub runs its frontend, Node.js API, embedding, connector, query, Docling, and indexing processes in the upstream all-in-one container. Redis provides both the key-value store and message broker, avoiding Kafka, ZooKeeper, and etcd.

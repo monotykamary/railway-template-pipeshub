@@ -10,7 +10,7 @@ const pins = new Map([
   ['app/Dockerfile', 'pipeshubai/pipeshub-ai:0.6.0-slim@sha256:8bfc3fc47eee2968042338563f464d0853245a099c22731a5446f8b7e0325ad0'],
   ['mongodb/Dockerfile', 'mongo:8.0.17@sha256:9814652e33f0cf8b9fddea8b46dfc9d8e19b130dcfdd7b510ca58bb0d40c8b71'],
   ['redis/Dockerfile', 'redis:8.4.0-bookworm@sha256:c22af04bb576503bf16b3e34a1fd2fd82de0f765afd866d2e380145e0af30d78'],
-  ['qdrant/Dockerfile', 'qdrant/qdrant:v1.15.5@sha256:0fb8897412abc81d1c0430a899b9a81eb8328aa634e7242d1bc804c1fe8fe863'],
+  ['qdrant/Dockerfile', 'qdrant/qdrant:v1.14.1@sha256:419d72603f5346ee22ffc4606bdb7beb52fcb63077766fab678e6622ba247366'],
   ['neo4j/Dockerfile', 'neo4j:5.26.0@sha256:5a015e53de1895e7eee1574ae0325cf8c4b89587222778108c594bdd45a474b5'],
 ]);
 
