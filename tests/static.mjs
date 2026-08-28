@@ -7,7 +7,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 
 const pins = new Map([
-  ['app/Dockerfile', 'pipeshubai/pipeshub-ai:0.6.0-slim@sha256:8bfc3fc47eee2968042338563f464d0853245a099c22731a5446f8b7e0325ad0'],
+  ['app/Dockerfile', 'pipeshubai/pipeshub-ai:0.7.0-slim@sha256:400358686a0794305a96bfb6d0f502b85f20fc0cb16a838d90c74bfa3e8dfb91'],
   ['mongodb/Dockerfile', 'mongo:8.0.17@sha256:9814652e33f0cf8b9fddea8b46dfc9d8e19b130dcfdd7b510ca58bb0d40c8b71'],
   ['redis/Dockerfile', 'redis:8.4.0-bookworm@sha256:c22af04bb576503bf16b3e34a1fd2fd82de0f765afd866d2e380145e0af30d78'],
   ['qdrant/Dockerfile', 'qdrant/qdrant:v1.14.1@sha256:419d72603f5346ee22ffc4606bdb7beb52fcb63077766fab678e6622ba247366'],

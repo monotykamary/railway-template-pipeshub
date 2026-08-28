@@ -2,7 +2,7 @@
 
 ## Decision
 
-**`publish-with-documented-limit`** for PipesHub `v0.6.0` (`d77dca07974bf7abc7a91bfb4b575bb968ca53b6`, released 2026-08-10).
+**`publish-with-documented-limit`** for PipesHub `v0.7.0` (`2e0d384a1f99410583b69590a4a22efb7313de4e`, released 2026-08-26).
 
 Core search, connector, retrieval, graph, indexing, authentication, and non-code agent functionality fit Railway. Docker-backed safe code execution does not: Railway provides neither `/var/run/docker.sock` nor privileged nested Docker. The template keeps production Docker sandbox mode without a daemon so that feature fails closed, and documents the omission prominently.
 
@@ -28,7 +28,7 @@ No existing PipesHub template was returned by `railway templates search pipeshub
 
 | Component | Pin | Registry digest | Architectures |
 |---|---|---|---|
-| PipesHub | `0.6.0-slim` | `sha256:8bfc3fc47eee2968042338563f464d0853245a099c22731a5446f8b7e0325ad0` | `linux/amd64`, `linux/arm64` |
+| PipesHub | `0.7.0-slim` | `sha256:400358686a0794305a96bfb6d0f502b85f20fc0cb16a838d90c74bfa3e8dfb91` | `linux/amd64`, `linux/arm64` |
 | MongoDB | `8.0.17` | `sha256:9814652e33f0cf8b9fddea8b46dfc9d8e19b130dcfdd7b510ca58bb0d40c8b71` | `linux/amd64`, `linux/arm64` |
 | Redis | `8.4.0-bookworm` | `sha256:c22af04bb576503bf16b3e34a1fd2fd82de0f765afd866d2e380145e0af30d78` | `linux/amd64`, `linux/arm64` |
 | Qdrant | `v1.14.1` | `sha256:419d72603f5346ee22ffc4606bdb7beb52fcb63077766fab678e6622ba247366` | `linux/amd64`, `linux/arm64` |
@@ -65,4 +65,4 @@ A fresh deployment from the serialized template passed the release gate on 2026-
 - final soak telemetry had zero HTTP errors, failed DNS lookups, or dropped network flows
 - exact final deployment logs had no crash, OOM, panic, fatal, Qdrant version-mismatch, or deprecated Neo4j memory-setting signals
 - Neo4j Community emitted expected startup errors for Enterprise-only property-existence constraints; PipesHub explicitly catches those unsupported constraints and continued healthy
-- the canonical marketplace route rendered the exact `PipesHub` title, creator, source repository, five-service topology, `v0.6.0`, and Qdrant `1.14.1` markers
+- the canonical marketplace route rendered the exact `PipesHub` title, creator, source repository, five-service topology, `v0.7.0`, and Qdrant `1.14.1` markers

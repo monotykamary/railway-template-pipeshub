@@ -2,7 +2,7 @@
 
 ## PipesHub
 
-The application image and the icon source come from [pipeshub-ai/pipeshub-ai](https://github.com/pipeshub-ai/pipeshub-ai) at tag `v0.6.0`, commit `d77dca07974bf7abc7a91bfb4b575bb968ca53b6`.
+The application image comes from [pipeshub-ai/pipeshub-ai](https://github.com/pipeshub-ai/pipeshub-ai) at tag `v0.7.0`, commit `2e0d384a1f99410583b69590a4a22efb7313de4e`. The icon source `frontend/app/icon.svg` is byte-identical at `v0.7.0` and `v0.7.0`.
 
 - License: Apache License 2.0
 - Icon source: `frontend/app/icon.svg`
