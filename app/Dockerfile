@@ -1,7 +1,7 @@
-FROM pipeshubai/pipeshub-ai:0.7.0-slim@sha256:400358686a0794305a96bfb6d0f502b85f20fc0cb16a838d90c74bfa3e8dfb91
+FROM pipeshubai/pipeshub-ai:0.8.0-slim@sha256:b54ecd2060c5d40218c6a5b8720f2d9f269ce9b238212aa346357ebc2983ad2e
 
 LABEL org.opencontainers.image.source="https://github.com/monotykamary/railway-template-pipeshub"
-LABEL org.opencontainers.image.version="0.7.0-slim"
+LABEL org.opencontainers.image.version="0.8.0-slim"
 
 COPY --chmod=755 entrypoint.sh /usr/local/bin/railway-pipeshub-entrypoint
 ENTRYPOINT ["/usr/local/bin/railway-pipeshub-entrypoint"]
