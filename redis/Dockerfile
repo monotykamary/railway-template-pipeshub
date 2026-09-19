@@ -1,4 +1,4 @@
-FROM redis:8.4.0-bookworm@sha256:c22af04bb576503bf16b3e34a1fd2fd82de0f765afd866d2e380145e0af30d78
+FROM redis:8.4.6@sha256:caf90da0045e7af357b1e30446ca13a07b78b502aed2979f364d344cb26b8e70
 
 LABEL org.opencontainers.image.source="https://github.com/monotykamary/railway-template-pipeshub"
 
