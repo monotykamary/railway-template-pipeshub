@@ -31,10 +31,10 @@ No existing PipesHub template was returned by `railway templates search pipeshub
 | PipesHub | `0.7.0-slim` | `sha256:400358686a0794305a96bfb6d0f502b85f20fc0cb16a838d90c74bfa3e8dfb91` | `linux/amd64`, `linux/arm64` |
 | MongoDB | `8.0.17` | `sha256:9814652e33f0cf8b9fddea8b46dfc9d8e19b130dcfdd7b510ca58bb0d40c8b71` | `linux/amd64`, `linux/arm64` |
 | Redis | `8.4.0-bookworm` | `sha256:c22af04bb576503bf16b3e34a1fd2fd82de0f765afd866d2e380145e0af30d78` | `linux/amd64`, `linux/arm64` |
-| Qdrant | `v1.14.1` | `sha256:419d72603f5346ee22ffc4606bdb7beb52fcb63077766fab678e6622ba247366` | `linux/amd64`, `linux/arm64` |
+| Qdrant | `v1.19.1` | `sha256:419d72603f5346ee22ffc4606bdb7beb52fcb63077766fab678e6622ba247366` | `linux/amd64`, `linux/arm64` |
 | Neo4j | `5.26.0` | `sha256:5a015e53de1895e7eee1574ae0325cf8c4b89587222778108c594bdd45a474b5` | `linux/amd64`, `linux/arm64` |
 
-The Git tag is immutable and the upstream repository is Apache-2.0. Redis `bookworm` was resolved to `8.4.0-bookworm`. Upstream declares Qdrant `v1.15`, but PipesHub bundles `qdrant-client==1.13.1`; live validation showed that client flagging a two-minor gap as incompatible. The wrapper therefore pins the latest stable `v1.14.1`, which stays within the client’s supported one-minor window.
+The Git tag is immutable and the upstream repository is Apache-2.0. Redis `bookworm` was resolved to `8.4.0-bookworm`. Upstream declares Qdrant `v1.15`, but PipesHub bundles `qdrant-client==1.13.1`; live validation showed that client flagging a two-minor gap as incompatible. The wrapper therefore pins the latest stable `v1.19.1`, which stays within the client’s supported one-minor window.
 
 ## Local evidence
 
