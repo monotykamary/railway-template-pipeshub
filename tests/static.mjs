@@ -46,4 +46,10 @@ assert.match(appConfig, /healthcheckPath="\/api\/v1\/health\/services"/);
 assert.match(appConfig, /healthcheckTimeout=600/);
 assert.ok(fs.existsSync(path.join(root, 'assets/pipeshub-icon-v060.png')));
 
+const entrypoint = read('app/entrypoint.sh');
+assert.match(entrypoint, /^: "\$\{TRUST_PROXY:=1\}"$/m, 'the adapter must default TRUST_PROXY for existing deployments');
+assert.match(entrypoint, /^export TRUST_PROXY$/m);
+assert.match(entrypoint, /^upstream_entrypoint=\/usr\/local\/bin\/docker-entrypoint\.sh$/m);
+assert.match(entrypoint, /"\$\{launcher\[@\]\}" "\$@" &$/m, 'the application must start through the upstream entrypoint');
+
 console.log('Static template checks passed.');

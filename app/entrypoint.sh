@@ -5,6 +5,29 @@ if [[ $# -eq 0 ]]; then
   set -- /app/process_monitor.sh
 fi
 
+# PipesHub 0.10.0 counts login, OTP, and password attempts per req.ip. Railway
+# serves the public domain through one edge proxy, so trust exactly one hop
+# unless the operator chose another value. The default lives here because
+# existing deployments never receive new template variables.
+: "${TRUST_PROXY:=1}"
+export TRUST_PROXY
+
+# PipesHub 0.10.0 ships an image entrypoint that hands data written by earlier
+# root-running releases to uid 1000 and then drops every capability. This
+# adapter replaces the image ENTRYPOINT, so start the application through it.
+# The adapter itself stays root: it only supervises and writes the marker.
+# A runtime that withholds the capabilities needed for that drop keeps the
+# previous root behavior rather than crash-looping an existing deployment.
+upstream_entrypoint=/usr/local/bin/docker-entrypoint.sh
+launcher=()
+if [[ -x "$upstream_entrypoint" ]]; then
+  if "$upstream_entrypoint" true; then
+    launcher=("$upstream_entrypoint")
+  else
+    echo "warning: $upstream_entrypoint could not drop privileges in this runtime; PipesHub will keep running as $(id -un)." >&2
+  fi
+fi
+
 port="${PORT:-3000}"
 data_dir="${PIPESHUB_DATA_DIR:-/data/pipeshub}"
 marker="$data_dir/.railway-bootstrap-complete"
@@ -34,7 +57,7 @@ env \
   -u PIPESHUB_ADMIN_PASSWORD \
   -u PIPESHUB_ADMIN_NAME \
   -u PIPESHUB_ORG_NAME \
-  "$@" &
+  "${launcher[@]}" "$@" &
 child_pid=$!
 
 deadline=$((SECONDS + ${PIPESHUB_BOOTSTRAP_TIMEOUT:-300}))
