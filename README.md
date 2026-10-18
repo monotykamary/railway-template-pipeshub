@@ -18,10 +18,10 @@ Deploy a pinned, persistent [PipesHub](https://github.com/pipeshub-ai/pipeshub-a
 | Service | Version | Exposure | Persistent path |
 |---|---:|---|---|
 | PipesHub | `0.10.0-slim` | Public HTTPS on port `3000` | `/data/pipeshub` |
-| MongoDB | `8.0.32` | Private `27017` | `/data/db` |
+| MongoDB | `8.0.34` | Private `27017` | `/data/db` |
 | Redis | `8.4.7` | Private `6379` | `/data` |
 | Qdrant | `1.15.5` | Private `6333`/`6334` | `/qdrant/storage` |
-| Neo4j Community | `5.26.31` | Private `7687` | `/data` |
+| Neo4j Community | `5.26.32` | Private `7687` | `/data` |
 
 PipesHub runs its frontend, Node.js API, embedding, connector, query, Docling, and indexing processes in the upstream all-in-one container. Redis provides both the key-value store and message broker, avoiding Kafka, ZooKeeper, and etcd.
 

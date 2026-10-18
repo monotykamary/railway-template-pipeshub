@@ -1,3 +1,3 @@
-FROM neo4j:5.26.31@sha256:5eb12ad77fa46ab73e23df9ea1f43f5c0f2a79523435577648e046be042b9b93
+FROM neo4j:5.26.32@sha256:0a6e7aedf54a531f76286032d4365ead65b11cca05e4a15cdf23b8e53d6db02b
 
 LABEL org.opencontainers.image.source="https://github.com/monotykamary/railway-template-pipeshub"
