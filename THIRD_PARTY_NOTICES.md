@@ -14,9 +14,9 @@ The complete Apache-2.0 text is in [`LICENSE`](LICENSE).
 
 This repository references, but does not relicense, these upstream images:
 
-- MongoDB Community Server `8.0.34`: <https://www.mongodb.com/licensing/server-side-public-license>
-- Redis `8.4.7`: <https://redis.io/legal/licenses/>
-- Qdrant `1.15.5`: <https://github.com/qdrant/qdrant/blob/v1.15.5/LICENSE>
+- MongoDB Community Server `8.3.13`: <https://www.mongodb.com/licensing/server-side-public-license>
+- Redis `8.10.2`: <https://redis.io/legal/licenses/>
+- Qdrant `1.20.0`: <https://github.com/qdrant/qdrant/blob/v1.20.0/LICENSE>
 - Neo4j Community `5.26.32`: <https://neo4j.com/licensing/>
 
 Review each upstream license for your use and distribution requirements.

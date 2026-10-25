@@ -1,4 +1,4 @@
-FROM mongo:8.0.34@sha256:4a4ab5d4834207389e0d7270fac988e21ffedccecba77991a552f755df229907
+FROM mongo:8.3.13@sha256:0e900a3364da37b76d642b73b0bba56bd4c6c509ab470cf700436fd866bee3ff
 
 LABEL org.opencontainers.image.source="https://github.com/monotykamary/railway-template-pipeshub"
 
