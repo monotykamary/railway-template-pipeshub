@@ -16,7 +16,7 @@ This repository references, but does not relicense, these upstream images:
 
 - MongoDB Community Server `8.3.13`: <https://www.mongodb.com/licensing/server-side-public-license>
 - Redis `8.10.2`: <https://redis.io/legal/licenses/>
-- Qdrant `1.20.0`: <https://github.com/qdrant/qdrant/blob/v1.20.0/LICENSE>
+- Qdrant `1.16.3`: <https://github.com/qdrant/qdrant/blob/v1.16.3/LICENSE>
 - Neo4j Community `5.26.32`: <https://neo4j.com/licensing/>
 
 Review each upstream license for your use and distribution requirements.

@@ -1,3 +1,3 @@
-FROM qdrant/qdrant:v1.20.0@sha256:9bfc89f9914fc14876a88c05270685921a55b8877b254a98bcc1cc2f0a424cd2
+FROM qdrant/qdrant:v1.16.3@sha256:0425e3e03e7fd9b3dc95c4214546afe19de2eb2e28ca621441a56663ac6e1f46
 
 LABEL org.opencontainers.image.source="https://github.com/monotykamary/railway-template-pipeshub"
