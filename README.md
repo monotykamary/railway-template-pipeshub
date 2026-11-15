@@ -6,7 +6,7 @@ Deploy a pinned, persistent [PipesHub](https://github.com/pipeshub-ai/pipeshub-a
 
 ## What this repository provides
 
-- PipesHub `v0.10.0` using the immutable `0.11.1-slim` image digest
+- PipesHub image `0.11.1-slim`, pinned by immutable digest; wrapper bootstrapping was originally adapted against upstream `v0.10.0`
 - MongoDB, Redis Streams, Qdrant, and Neo4j on Railway private networking
 - generated database, API, encryption, and initial-admin secrets
 - a one-time administrator bootstrap that completes before the public health gate
