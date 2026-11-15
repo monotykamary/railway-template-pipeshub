@@ -6,7 +6,7 @@ Deploy a pinned, persistent [PipesHub](https://github.com/pipeshub-ai/pipeshub-a
 
 ## What this repository provides
 
-- PipesHub image `0.11.1-slim`, pinned by immutable digest; wrapper bootstrapping was originally adapted against upstream `v0.10.0`
+- PipesHub image `1.0.0-slim`, pinned by immutable digest; wrapper bootstrapping was originally adapted against upstream `v0.10.0`
 - MongoDB, Redis Streams, Qdrant, and Neo4j on Railway private networking
 - generated database, API, encryption, and initial-admin secrets
 - a one-time administrator bootstrap that completes before the public health gate
@@ -17,7 +17,7 @@ Deploy a pinned, persistent [PipesHub](https://github.com/pipeshub-ai/pipeshub-a
 
 | Service | Version | Exposure | Persistent path |
 |---|---:|---|---|
-| PipesHub | `0.11.1-slim` | Public HTTPS on port `3000` | `/data/pipeshub` |
+| PipesHub | `1.0.0-slim` | Public HTTPS on port `3000` | `/data/pipeshub` |
 | MongoDB | `8.3.13` | Private `27017` | `/data/db` |
 | Redis | `8.10.2` | Private `6379` | `/data` |
 | Qdrant | `1.16.3` | Private `6333`/`6334` | `/qdrant/storage` |
