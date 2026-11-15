@@ -2,7 +2,7 @@
 
 ## About Hosting PipesHub
 
-PipesHub is an open-source AI context layer for enterprise search, retrieval, connectors, and agentic workflows. This template deploys the stable `v0.10.0` release with MongoDB, Redis Streams, Qdrant, and Neo4j. The `PipesHub` service owns the public HTTPS domain on port `3000`; all databases remain private.
+PipesHub is an open-source AI context layer for enterprise search, retrieval, connectors, and agentic workflows. This template deploys the stable `v1.0.0` release using the pinned `1.0.0-slim` image with MongoDB, Redis Streams, Qdrant, and Neo4j. The `PipesHub` service owns the public HTTPS domain on port `3000`; all databases remain private.
 
 On first deployment, enter `PIPESHUB_ADMIN_EMAIL`. The template generates the administrator password and all cross-service secrets. A bootstrap adapter creates the single initial organization before the public health gate succeeds. Sign in with the email you entered and the `PIPESHUB_ADMIN_PASSWORD` value shown on the PipesHub service.
 
